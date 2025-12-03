@@ -372,3 +372,51 @@ footer img:hover {
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+.download-button {
+    display: none; /* Caché par défaut sur desktop */
+    background-color: white;
+    color: #D3CCF8;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+.mobile-message {
+    display: none;
+    background-color: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+.mobile-message p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .portfolio-content iframe {
+        display: none !important;
+    }
+
+    .download-button {
+        display: block;
+    }
+
+    .mobile-message {
+        display: block;
+    }
+}
