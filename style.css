@@ -373,9 +373,7 @@ footer img:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .download-button {
-    display: none; /* Caché par défaut sur desktop */
-    background-color: white;
-    color: #D3CCF8;
+    display: none; 
     padding: 20px 40px;
     text-decoration: none;
     border-radius: 8px;
