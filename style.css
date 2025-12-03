@@ -1,0 +1,368 @@
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Garamond', 'EB Garamond', 'Apple Garamond', serif;
+    color: white;
+}
+
+body {
+    background-color: #D3CCF8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* === NAVIGATION === */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #D3CCF8;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navigateur {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+.navigateur td {
+    border-left: 2px solid white;
+    font-size: 30px;
+    padding: 15px 10px;
+}
+
+.navigateur td:first-child {
+    border-left: none;
+    border-right: 2px solid white;
+}
+
+.navigateur td:last-child {
+    border-right: none;
+}
+
+.navigateur a {
+    text-decoration: none;
+    font-weight: normal;
+    color: white;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.navigateur a:hover {
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.navigateur a:focus {
+    outline: 2px solid white;
+    outline-offset: 4px;
+}
+
+.navigateur a:active {
+    transform: scale(0.98);
+}
+
+.navigateur img {
+    vertical-align: middle;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.navigateur img:hover {
+    transform: scale(1.1);
+}
+
+/* === FOOTER === */
+footer {
+    margin-top: auto;
+    background-color: #D3CCF8;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer table {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+
+footer td {
+    border-left: 2px solid white;
+    font-size: 18px;
+    padding: 10px;
+    color: white;
+}
+
+footer td:first-child {
+    border-left: none;
+    border-right: 2px solid white;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+footer a:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+footer img {
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+/* === PAGE HOMEPAGE === */
+#home-title {
+    color: white;
+    margin: 30px 0;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.video {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+.video video {
+    display: block;
+    margin: 0 auto;
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* === PAGE CV === */
+.cv-container {
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.cv-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* === PAGE PORTFOLIO === */
+.portfolio-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.portfolio-content iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+/* === PAGE MOTIVATIONS === */
+.motivation-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.motivation-content h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.motivation-content p {
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+    
+    .cv-container {
+        max-width: 95%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+    
+    .sidebar {
+        padding: 30px 20px;
+    }
+    
+    .main-content {
+        padding: 30px 20px;
+    }
+    
+    .navigateur td {
+        font-size: 18px;
+        padding: 10px 5px;
+    }
+    
+    .navigateur img {
+        height: 45px;
+    }
+    
+    footer td {
+        font-size: 14px;
+        padding: 8px 5px;
+    }
+    
+    footer img {
+        width: 40px;
+        height: auto;
+    }
+    
+    .video {
+        padding: 10px;
+    }
+    
+    .video video {
+        width: 100%;
+    }
+    
+    .edu-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .motivation-content {
+        margin: 20px 10px;
+        padding: 25px;
+    }
+    
+    #home-title {
+        font-size: 1.8em;
+        margin: 20px 10px;
+    }
+    
+    .cv-container {
+        padding: 10px;
+        margin: 10px;
+    }
+    
+    .portfolio-content {
+        padding: 10px;
+        margin: 20px 10px;
+    }
+    
+    .portfolio-content iframe {
+        min-height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigateur td {
+        font-size: 14px;
+        padding: 8px 3px;
+    }
+    
+    .navigateur img {
+        height: 40px;
+    }
+    
+    .name {
+        font-size: 22px;
+    }
+    
+    .intro h1 {
+        font-size: 24px;
+    }
+    
+    .skills-list,
+    .interests-list {
+        margin-left: 15px;
+    }
+    
+    .skills-list ul {
+        margin-left: 15px;
+    }
+    
+    .exp-details {
+        margin-left: 15px;
+    }
+    
+    footer td {
+        font-size: 12px;
+    }
+    
+    footer img {
+        width: 35px;
+    }
+    
+    .motivation-content {
+        padding: 20px;
+    }
+    
+    .motivation-content h1 {
+        font-size: 1.5em;
+    }
+    
+    .motivation-content p {
+        font-size: 14px;
+    }
+    
+    #home-title {
+        font-size: 1.5em;
+    }
+    
+    .portfolio-content iframe {
+        min-height: 500px;
+    }
+}
