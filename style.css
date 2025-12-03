@@ -379,7 +379,6 @@ footer img:hover {
     border-radius: 8px;
     font-size: 20px;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     text-align: center;
     margin: 20px auto;
@@ -388,14 +387,11 @@ footer img:hover {
 
 .mobile-message {
     display: none;
-    padding: 30px;
-    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin: 20px;
 }
 
 .mobile-message p {
+    font-weight: bold;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
