@@ -274,7 +274,7 @@ footer img:hover {
     }
     
     .video video {
-        width: 100%;
+        max-width: 70%;
     }
     
     .edu-details {
